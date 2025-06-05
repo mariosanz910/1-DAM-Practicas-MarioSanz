@@ -9,3 +9,11 @@ CREATE TABLE productos (
     precio DECIMAL(10, 2),
     stock INT
 );
+
+CREATE TABLE clientes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    telefono VARCHAR(20),
+    fecha_registro DATE DEFAULT (CURRENT_DATE)
+);
