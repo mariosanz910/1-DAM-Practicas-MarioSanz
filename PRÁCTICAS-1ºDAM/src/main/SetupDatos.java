@@ -2,7 +2,9 @@ package main;
 
 import java.util.List;
 
+import dao.ClienteDAO;
 import dao.ProductoDAO;
+import modelo.ClienteOtaku;
 import modelo.ProductoOtaku;
 
 public class SetupDatos {
@@ -22,6 +24,10 @@ public class SetupDatos {
 	        productoDAO.agregarProducto(p1);
 	        productoDAO.agregarProducto(p2);
 	        productoDAO.agregarProducto(p3);
+
+	     	ClienteOtaku c1 = new ClienteOtaku("Mario", "Mario@correo", "12345678");
+	        ClienteDAO clienteDAO = new ClienteDAO();
+		clienteDAO.agregarCliente(c1);
 
 	        System.out.println("Productos insertados correctamente.");
 	    } else {
